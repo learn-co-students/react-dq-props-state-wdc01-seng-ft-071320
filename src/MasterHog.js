@@ -21,6 +21,7 @@ export default class MasterHog extends Component {
 
 
   render() {
+    
     return (
       <div>
 
@@ -40,9 +41,8 @@ export default class MasterHog extends Component {
         </div>
         
         <ul className="hoglist">
-          <BabyHog />
-          <BabyHog />
-          <BabyHog />
+          {offspring.map(babyPig => <BabyHog name={babyPig.name} hobby={babyPig.hobby} eyeColor={this.state.eyeColor} />)}
+          
         </ul>
 
       </div>
