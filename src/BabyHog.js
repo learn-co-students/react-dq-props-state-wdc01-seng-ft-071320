@@ -22,7 +22,7 @@ export default class BabyHog extends Component {
     const newWeight =
       e.target.name === "+" ? this.state.weight + 10 : this.state.weight - 10;
     this.setState({
-      weight: newWeight,
+      weight: newWeight > 0 ? newWeight : 0,
     });
   };
 
